@@ -4,7 +4,7 @@ const InvestmentCard = ({ title, value, percentage, subtitle, trend }) => {
     const isPositive = trend === 'up';
    
     return (
-      <div className="bg-gray-900 rounded-lg p-4 flex flex-col transition-all hover:shadow-lg hover:bg-gray-800 cursor-pointer">
+      <div className="bg-gray-900 rounded-lg p-4 flex flex-col transition-all hover:shadow-lg hover:bg-gray-800 cursor-pointer hover:scale-95 duration-300">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-gray-400 text-sm font-medium">{title}</h3>
           <div className={`flex items-center ${isPositive ? 'text-green-500' : 'text-red-500'}`}>

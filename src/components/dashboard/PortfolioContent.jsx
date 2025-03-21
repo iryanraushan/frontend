@@ -3,6 +3,8 @@ import { investmentData } from '@/utils/data';
 import { useState } from 'react';
 import InvestmentCard from '../ui/InvestmentsCards';
 import PerformanceSummary from '../ui/PerformanceSummary';
+import SectorAllocation from '../ui/SectorAllocation';
+import PortFolioComposition from '../ui/PortFolioComposition';
 
 export default function PortfolioContent() {
   const [activeTab, setActiveTab] = useState('metrics');
@@ -65,10 +67,7 @@ export default function PortfolioContent() {
       )}
 
       {activeTab === 'composition' && (
-        <div className="bg-gray-900 p-4 rounded-lg transition-all duration-300 ease-in-out">
-          <h2 className="text-lg font-bold text-white mb-4">Portfolio Composition</h2>
-          <p className="text-gray-400">Portfolio composition content goes here.</p>
-        </div>
+        <PortFolioComposition />
       )}
     </div>
   );
